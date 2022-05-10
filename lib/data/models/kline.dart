@@ -14,4 +14,15 @@ class Kline {
     required this.volume,
     required this.timestamp,
   });
+
+  factory Kline.fromJson(List<String> jsonData) {
+    return Kline(
+      open: double.parse(jsonData[5]),
+      high: double.parse(jsonData[3]),
+      low: double.parse(jsonData[4]),
+      close: double.parse(jsonData[2]),
+      volume: double.parse(jsonData[1]),
+      timestamp: int.parse(jsonData[0]),
+    );
+  }
 }
