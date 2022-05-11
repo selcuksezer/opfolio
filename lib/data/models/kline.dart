@@ -15,7 +15,7 @@ class Kline {
     required this.timestamp,
   });
 
-  factory Kline.fromJson(List<String> jsonData) {
+  factory Kline.fromJson(List<dynamic> jsonData) {
     return Kline(
       open: double.parse(jsonData[5]),
       high: double.parse(jsonData[3]),
